@@ -1,1 +1,3 @@
 rootProject.name = 'springboot-react-boilerplate'
+include 'boilerplate-web'
+

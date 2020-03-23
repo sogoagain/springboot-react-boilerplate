@@ -3,8 +3,8 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const getFilesFromDir = require("./config/files");
 const PAGE_DIR = path.join("src", "pages", path.sep);
 
-const SPRING_STATIC_PATH = "../src/main/resources/static";
-const SPRING_PAGES_PATH = "../src/main/resources/templates";
+const SPRING_STATIC_PATH = "../boilerplate-web/src/main/resources/static";
+const SPRING_PAGES_PATH = "../boilerplate-web/src/main/resources/templates";
 
 const htmlPlugins = getFilesFromDir(PAGE_DIR, [".html"]).map(filePath => {
     const outputFile = path.basename(filePath);
