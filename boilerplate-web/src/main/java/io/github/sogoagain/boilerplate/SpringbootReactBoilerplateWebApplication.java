@@ -9,8 +9,10 @@ import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilde
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
+import javax.annotation.PostConstruct;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.TimeZone;
 
 @SpringBootApplication
 @EnableConfigurationProperties(EnvironmentProperty.class)
@@ -18,6 +20,11 @@ public class SpringbootReactBoilerplateWebApplication implements Jackson2ObjectM
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootReactBoilerplateWebApplication.class, args);
+    }
+
+    @PostConstruct
+    public void init() {
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }
 
     @Override
