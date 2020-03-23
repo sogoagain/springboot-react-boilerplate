@@ -1,0 +1,32 @@
+@import '~antd/dist/antd.css';
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hello-form {
+    max-width: 60vh;
+    margin: 20px auto;
+}
+
+.hello-result {
+    padding: 10px;
+}
+
+.hello-table {
+    padding: 0 80px;
+}
+
+.Footer {
+    text-align: center;
+}
