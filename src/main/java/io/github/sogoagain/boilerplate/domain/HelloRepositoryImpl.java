@@ -9,7 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 import javax.persistence.EntityManager;
-
 import java.util.List;
 
 import static io.github.sogoagain.boilerplate.domain.QHello.hello;
