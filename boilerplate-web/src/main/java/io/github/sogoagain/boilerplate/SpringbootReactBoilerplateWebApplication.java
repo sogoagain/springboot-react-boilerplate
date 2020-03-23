@@ -14,10 +14,10 @@ import java.time.format.DateTimeFormatter;
 
 @SpringBootApplication
 @EnableConfigurationProperties(EnvironmentProperty.class)
-public class SpringbootReactBoilerplateApplication implements Jackson2ObjectMapperBuilderCustomizer {
+public class SpringbootReactBoilerplateWebApplication implements Jackson2ObjectMapperBuilderCustomizer {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootReactBoilerplateApplication.class, args);
+        SpringApplication.run(SpringbootReactBoilerplateWebApplication.class, args);
     }
 
     @Override
