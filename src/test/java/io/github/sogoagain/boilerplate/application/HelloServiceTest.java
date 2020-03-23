@@ -81,7 +81,7 @@ class HelloServiceTest {
             helloList.add(hello);
         }
 
-        given(helloRepository.findAllByOrderByIdDesc(pageable)).willReturn(new PageImpl<>(helloList, pageable, total));
+        given(helloRepository.findByOrderByIdDesc(pageable)).willReturn(new PageImpl<>(helloList, pageable, total));
 
         final PagedModel<Hello> resources = helloService.getHelloList(pageable);
 
@@ -91,7 +91,7 @@ class HelloServiceTest {
         assertThat(resources.getMetadata().getNumber()).isEqualTo(pageNumber);
         assertThat(resources.getMetadata().getSize()).isEqualTo(pageSize);
 
-        verify(helloRepository).findAllByOrderByIdDesc(pageable);
+        verify(helloRepository).findByOrderByIdDesc(pageable);
     }
 
     @Test

@@ -4,6 +4,5 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface HelloRepository extends PagingAndSortingRepository<Hello, Long> {
-    Page<Hello> findAllByOrderByIdDesc(Pageable pageable);
+public interface HelloRepository extends PagingAndSortingRepository<Hello, Long>, HelloRepositoryCustom {
 }

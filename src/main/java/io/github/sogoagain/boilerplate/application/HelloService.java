@@ -32,7 +32,7 @@ public class HelloService {
     }
 
     public PagedModel<Hello> getHelloList(Pageable pageable) {
-        final Page<Hello> helloList = helloRepository.findAllByOrderByIdDesc(pageable);
+        final Page<Hello> helloList = helloRepository.findByOrderByIdDesc(pageable);
         final PagedModel.PageMetadata pageMetadata = new PagedModel.PageMetadata(pageable.getPageSize(), helloList.getNumber(), helloList.getTotalElements());
 
         return new PagedModel<>(new ArrayList<>(helloList.getContent()), pageMetadata);

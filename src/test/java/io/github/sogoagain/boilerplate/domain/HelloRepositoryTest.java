@@ -57,7 +57,7 @@ class HelloRepositoryTest {
     @Test
     void findAllByOrderByIdDesc() {
         final Pageable pageable = PageRequest.of(1, 3);
-        final Page<Hello> helloPage = helloRepository.findAllByOrderByIdDesc(pageable);
+        final Page<Hello> helloPage = helloRepository.findByOrderByIdDesc(pageable);
 
         assertThat(helloPage.getContent().get(0).getId()).isGreaterThan(helloPage.getContent().get(1).getId());
         assertThat(helloPage.getTotalElements()).isEqualTo(10);
