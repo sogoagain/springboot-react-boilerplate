@@ -11,7 +11,7 @@
 ## 사용 프레임워크
 
 - back-end: SpringBoot2, JPA, QueryDsl
-- front-end: ReactJS, Ant Design
+- front-end: ReactJS, Redux Toolkit, Ant Design
 
 ## 실행 방법
 
