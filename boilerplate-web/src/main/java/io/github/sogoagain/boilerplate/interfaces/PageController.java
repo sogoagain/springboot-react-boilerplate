@@ -14,11 +14,11 @@ public class PageController implements ErrorController {
 
     @GetMapping("/error")
     public String get404Page() {
-        return "/404";
+        return "/index";
     }
 
     @Override
     public String getErrorPath() {
-        return "/error";
+        return "/index";
     }
 }

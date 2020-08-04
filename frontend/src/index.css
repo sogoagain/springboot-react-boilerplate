@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import '~antd/dist/antd.min.css';
 
 body {
     margin: 0;
@@ -12,21 +12,4 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.hello-form {
-    max-width: 60vh;
-    margin: 20px auto;
-}
-
-.hello-result {
-    padding: 10px;
-}
-
-.hello-table {
-    padding: 0 80px;
-}
-
-.Footer {
-    text-align: center;
 }

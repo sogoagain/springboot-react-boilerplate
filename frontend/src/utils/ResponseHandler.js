@@ -1,23 +1,22 @@
-const ResponseHandler = {};
+const ERROR_TYPE = {
+  409: 'ConflictError',
+  400: 'BadRequestError',
+  422: 'UnprocessableError',
+};
 
-ResponseHandler.handleResponse = async (response) => {
+const ResponseHandler = {
+  handleResponse: async (response) => {
     const json = await response.json();
     if (response.ok) {
-        return json;
+      return json;
     }
 
     const error = Error(json.message ? json.message : response.status);
-    switch (response.status) {
-        case 409:
-            error.name = "ConflictError";
-            break;
-        case 400:
-            error.name = "BadRequestError";
-            break;
-        case 422:
-            error.name = "UnprocessableError";
-    }
+    const type = ERROR_TYPE[response.status] || 'CommonError';
+    error.name = type;
+
     throw error;
+  },
 };
 
 export default ResponseHandler;
