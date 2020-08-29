@@ -1,5 +1,3 @@
-[![HitCount](http://hits.dwyl.com/sogoagain/springboot-react-boilerplate.svg)](http://hits.dwyl.com/sogoagain/springboot-react-boilerplate)
-
 # SpringBoot2 & ReactJS Boilerplate
 
 ## 목적
